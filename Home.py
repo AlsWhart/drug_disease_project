@@ -14,11 +14,11 @@ The app uses a machine learning model hosted on a cloud API to make the predicti
 
 ### :test_tube: App Sections:
 
-#### 1. General Prediction (for Everyone)
-A simplified version where you just select a **drug** and a **disease** from dropdown menus — no technical background needed. Ideal for quick searches.
-
-#### 2. Advanced Prediction (for Researchers)
+**1. Advanced Prediction (for Researchers)**
 A more detailed version where you can input specific biological features of a drug-disease interaction like whether a target protein is involved in the disease pathway and whether the drug affects a specific biological pathway — designed for advanced users and researchers.
+
+**2. General Prediction (for Everyone)**
+A simplified version where you just select a **drug** and a **disease** from dropdown menus — no technical background needed. Ideal for quick searches.
 
 ---
 
