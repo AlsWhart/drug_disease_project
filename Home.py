@@ -20,8 +20,8 @@ st.markdown(
     <div style="display: flex; align-items: center; justify-content: flex-start; padding: 20px;">
         <img src="data:image/png;base64,{ai_image_base64}" alt="AI Logo" style="height: 80px; margin-right: 30px;">
         <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 80px; margin-right: 30px;">
-        <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 80px;">
-        <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 80px;">
+        <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 80px; margin-right: 30px;">
+        <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 80px; margin-right: 30px;">
     </div>
     """,
     unsafe_allow_html=True
