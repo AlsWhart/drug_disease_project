@@ -12,6 +12,7 @@ def get_image_base64(image_path):
 ai_image_base64 = get_image_base64("AI (4).png")
 drugs_image_base64 = get_image_base64("drugs.png")
 proteins_image_base64 = get_image_base64("Target proteins.png")
+ml_image_base64 = get_image_base64("machine learning (4).png")
 
 # Display images in a row using HTML/CSS
 st.markdown(
@@ -20,6 +21,7 @@ st.markdown(
         <img src="data:image/png;base64,{ai_image_base64}" alt="AI Logo" style="height: 80px; margin-right: 30px;">
         <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 80px; margin-right: 30px;">
         <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 80px;">
+        <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 80px;">
     </div>
     """,
     unsafe_allow_html=True
