@@ -9,10 +9,10 @@ def get_image_base64(image_path):
     return base64.b64encode(data).decode()
 
 # Load all images
-ai_image_base64 = get_image_base64("/images/AI (4).png")
-drugs_image_base64 = get_image_base64("/images/drugs.png")
-proteins_image_base64 = get_image_base64("/images/Target proteins.png")
-ml_image_base64 = get_image_base64("/images/machine learning (4).png")
+ai_image_base64 = get_image_base64("images/AI (4).png")
+drugs_image_base64 = get_image_base64("images/drugs.png")
+proteins_image_base64 = get_image_base64("images/Target proteins.png")
+ml_image_base64 = get_image_base64("images/machine learning (4).png")
 
 # Display images in a row using HTML/CSS
 st.markdown(
