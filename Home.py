@@ -30,7 +30,7 @@ st.markdown(
 # Padding below images
 st.markdown("<br>", unsafe_allow_html=True)
 st.title("AI-Driven Drug Repurposing App")
-st.markdown("""🧠Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtić, Luka Jelic and Sjoerd de Wit.""")
+st.markdown("""🧠 Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtić, Luka Jelic and Sjoerd de Wit.""")
 st.markdown("""---""")
 
 #Sections for better layout
@@ -50,12 +50,7 @@ with st.expander("Advanced Prediction for Researchers"):
 
 with st.expander("General Prediction for Everyone"):
     st.caption("A simplified version where you just select a **drug** and a **disease** from dropdown menus — no technical background is needed. Ideal for quick searches.")
-st.markdown("""
-    <div style="padding-left: 30px;">
-    🚀 Pick a page from the sidebar to get started!
-    </div>
-    """,
-    unsafe_allow_html=True)
+st.markdown("""🚀 Pick a page from the sidebar to get started!""")
 st.markdown("""---""")
 
 with st.expander("References"):
