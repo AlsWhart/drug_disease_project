@@ -34,7 +34,7 @@ st.markdown(
         <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 100px; margin-right: 30px;">
-        <img src="data:image/png;base64,{qr_code_base64}" alt="QR Code" style="height: 120px;">
+        <img src="data:image/png;base64,{qr_code_base64}" alt="QR Code" style="height: 120px; margin-right: 30px;">
     </div>
     """,
     unsafe_allow_html=True
