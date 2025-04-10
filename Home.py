@@ -1,4 +1,9 @@
 import streamlit as st
+from PIL import Image
+
+# Load and display the image
+image = Image.open("AI (4).png")
+st.image(image, caption="AI-powered Drug-Disease Interaction", use_column_width=True)
 
 st.title("AI-Driven Drug Repurposing App")
 
