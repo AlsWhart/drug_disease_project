@@ -9,11 +9,10 @@ def get_image_base64(image_path):
     return base64.b64encode(data).decode()
 
 # Load all images
-ai_image_base64 = get_image_base64("AI (4).png")
-drugs_image_base64 = get_image_base64("drugs.png")
-proteins_image_base64 = get_image_base64("Target proteins.png")
-ml_image_base64 = get_image_base64("machine learning (4).png")
-qr_code_base64 = get_image_base64("qr_code.png")
+ai_image_base64 = get_image_base64("/images/AI (4).png")
+drugs_image_base64 = get_image_base64("/images/drugs.png")
+proteins_image_base64 = get_image_base64("/images/Target proteins.png")
+ml_image_base64 = get_image_base64("/images/machine learning (4).png")
 
 # Display images in a row using HTML/CSS
 st.markdown(
@@ -23,7 +22,6 @@ st.markdown(
         <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 100px; margin-right: 30px;">
-        <img src="data:image/png;base64,{qr_code_base64}" alt="QR Code" style="height: 100px; margin-right: 30px;">
     </div>
     """,
     unsafe_allow_html=True
@@ -32,7 +30,7 @@ st.markdown(
 # Padding below images
 st.markdown("<br>", unsafe_allow_html=True)
 st.title("AI-Driven Drug Repurposing App")
-st.markdown("Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtic, Luka Jelic, Wail El-Edghiri and Sjoerd de Wit.")
+st.markdown("Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtić, Luka Jelic and Sjoerd de Wit.")
 st.markdown("""---""")
 
 #Sections for better layout
@@ -54,6 +52,10 @@ with st.expander("General Prediction for Everyone"):
     st.caption("A simplified version where you just select a **drug** and a **disease** from dropdown menus — no technical background is needed. Ideal for quick searches.")
 
 st.markdown("""
-            ---
             :rocket: Pick a page from the sidebar to get started!
+""")
+
+st.markdown("""
+            ---
+            Images created in BioRender. Perez, J. (2025) https://BioRender.com/vg8e5t0
 """)
