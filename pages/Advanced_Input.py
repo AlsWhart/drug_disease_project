@@ -66,7 +66,3 @@ if st.button("🔍 Predict Interaction"):
         st.success(f"✅ Prediction: There is **{pretty_pred}**.")
     except Exception as e:
         st.error(f"❌ Failed to get prediction: {e}")
-
-# num_drugtargets = st.number_input(
-#         "Select the total number of target proteins that the drug interacts with. Range: 0 - 191.", min_value=0, max_value=191, value=1, step=1
-#     )
