@@ -30,8 +30,9 @@ st.markdown(
 # Padding below images
 st.markdown("<br>", unsafe_allow_html=True)
 st.title("AI-Driven Drug Repurposing App")
-st.markdown("Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtić, Luka Jelic and Sjoerd de Wit.")
-st.markdown("""---""")
+st.markdown("""Developers: Dr. Francy Johanna Pérez-Llanos, Alice Wharton, Dr. Marijana Jevtić, Luka Jelic and Sjoerd de Wit.
+            ---
+""")
 
 #Sections for better layout
 with st.expander("Welcome to the AI-Driven Drug Repurposing App!", expanded=False):
@@ -51,11 +52,15 @@ with st.expander("Advanced Prediction for Researchers"):
 with st.expander("General Prediction for Everyone"):
     st.caption("A simplified version where you just select a **drug** and a **disease** from dropdown menus — no technical background is needed. Ideal for quick searches.")
 
+st.markdown("""---""")
+
 st.markdown("""
-            :rocket: Pick a page from the sidebar to get started!
+            #### :rocket: Pick a page from the sidebar to get started!
 """)
 
 st.markdown("""
             ---
-            Images created in BioRender. Perez, J. (2025) https://BioRender.com/vg8e5t0
 """)
+
+with st.expander("References"):
+    st.caption("Images created in BioRender. Perez, J. (2025) https://BioRender.com/vg8e5t0")
