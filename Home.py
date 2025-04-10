@@ -2,36 +2,31 @@ import streamlit as st
 from PIL import Image
 import base64
 
-st.markdown("""
-    <style>
-        body {
-            background-color: #0e1117;
-            color: #FAFAFA;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Convert the image to base64 for inline HTML rendering
+# Convert image to base64
 def get_image_base64(image_path):
     with open(image_path, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
-# Get base64 encoded string
-image_base64 = get_image_base64("AI (4).png")
+# Load all images
+ai_image_base64 = get_image_base64("AI (4).png")
+drugs_image_base64 = get_image_base64("drugs.png")
+proteins_image_base64 = get_image_base64("Target proteins.png")
 
-# Custom HTML to align image top-left
+# Display images in a row using HTML/CSS
 st.markdown(
     f"""
-    <div style="position: absolute; top: 20px; left: 20px;">
-        <img src="data:image/png;base64,{image_base64}" alt="AI Logo" style="height: 80px;">
+    <div style="display: flex; align-items: center; justify-content: flex-start; padding: 20px;">
+        <img src="data:image/png;base64,{ai_image_base64}" alt="AI Logo" style="height: 80px; margin-right: 30px;">
+        <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 80px; margin-right: 30px;">
+        <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 80px;">
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# Add some top padding so the title doesn't overlap
-st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+# Padding below images
+st.markdown("<br><br>", unsafe_allow_html=True)
 
 st.title("AI-Driven Drug Repurposing App")
 st.markdown("""---""")
