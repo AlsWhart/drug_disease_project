@@ -2,12 +2,10 @@ import streamlit as st
 
 st.title("Drug-Disease Interaction Prediction App")
 
-st.markdown("""
-Welcome to the **Drug-Disease Interaction App**!
-This project serves as a proof of concept (PoC) to demonstrate the feasibility of using AI and genomic data for drug repurposing. By integrating multi-source biomedical datasets, we aim to explore whether machine learning models can successfully predict new drug-disease relationships based on genomic biomarkers and drug interactions.
-""")
+#Sections with better layout
+with st.expander("Welcome to the Drug-Disease Interaction App!", expanded=False):
+    st.caption("This project serves as a proof of concept (PoC) to demonstrate the feasibility of using AI and genomic data for drug repurposing. By integrating multi-source biomedical datasets, we aim to explore whether machine learning models can successfully predict new drug-disease relationships based on genomic biomarkers and drug interactions.")
 
-#Input sections with better layout
 with st.expander("🔬 How it works", expanded=False):
     st.caption("The app uses a machine learning model hosted on a cloud API to make the prediction. Simply choose a drug and a disease and the app will query the model and display the result.")
 
