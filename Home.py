@@ -1,9 +1,28 @@
 import streamlit as st
 from PIL import Image
+import base64
 
-# Load and display the image
-image = Image.open("AI (4).png")
-st.image(image, caption="AI-powered Drug-Disease Interaction", use_column_width=True)
+# Convert the image to base64 for inline HTML rendering
+def get_image_base64(image_path):
+    with open(image_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Get base64 encoded string
+image_base64 = get_image_base64("AI (4).png")
+
+# Custom HTML to align image top-left
+st.markdown(
+    f"""
+    <div style="position: absolute; top: 10px; left: 10px;">
+        <img src="data:image/png;base64,{image_base64}" alt="AI Logo" style="height: 80px;">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add some top padding so the title doesn't overlap
+st.markdown("<br><br><br><br>", unsafe_allow_html=True)
 
 st.title("AI-Driven Drug Repurposing App")
 
