@@ -1,17 +1,6 @@
 import streamlit as st
 from PIL import Image
 import base64
-# import qrcode
-# from io import BytesIO
-
-# # Generate the QR code
-# def generate_qr_code(data):
-#     qr = qrcode.make(data)
-#     buffered = BytesIO()
-#     qr.save(buffered, format="PNG")
-#     return base64.b64encode(buffered.getvalue()).decode()
-
-# qr_code_base64 = generate_qr_code("https://drugdisease.streamlit.app/")
 
 # Convert image to base64
 def get_image_base64(image_path):
@@ -24,6 +13,7 @@ ai_image_base64 = get_image_base64("AI (4).png")
 drugs_image_base64 = get_image_base64("drugs.png")
 proteins_image_base64 = get_image_base64("Target proteins.png")
 ml_image_base64 = get_image_base64("machine learning (4).png")
+qr_code_base64 = get_image_base64("qr_code.png")
 
 # Display images in a row using HTML/CSS
 st.markdown(
@@ -33,13 +23,11 @@ st.markdown(
         <img src="data:image/png;base64,{drugs_image_base64}" alt="Drugs" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{proteins_image_base64}" alt="Proteins" style="height: 100px; margin-right: 30px;">
         <img src="data:image/png;base64,{ml_image_base64}" alt="Machine Learning" style="height: 100px; margin-right: 30px;">
+        <img src="data:image/png;base64,{qr_code_base64}" alt="QR Code" style="height: 100px; margin-right: 30px;">
     </div>
     """,
     unsafe_allow_html=True
 )
-
-# <p>Scan the QR code to access the project page:</p>
-#         <img src="data:image/png;base64,{qr_code_base64}" alt="QR Code" style="height: 120px; margin-right: 30px;">
 
 # Padding below images
 st.markdown("<br>", unsafe_allow_html=True)
