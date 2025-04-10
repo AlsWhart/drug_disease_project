@@ -27,11 +27,6 @@ st.markdown("""
             :rocket: Pick a page from the sidebar to get started!
 """)
 
-# Input sections with better layout
-with st.expander("🔬 How it works", expanded=False):
-    st.caption("The app uses a machine learning model hosted on a cloud API to make the prediction. Simply choose a drug and a disease and the app will query the model and display the result.")
-
-
 # Original code
 # st.markdown("""
 # Welcome to the **Drug-Disease Interaction App**!
