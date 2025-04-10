@@ -2,6 +2,15 @@ import streamlit as st
 from PIL import Image
 import base64
 
+st.markdown("""
+    <style>
+        body {
+            background-color: #0e1117;
+            color: #FAFAFA;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Convert the image to base64 for inline HTML rendering
 def get_image_base64(image_path):
     with open(image_path, "rb") as f:
@@ -14,7 +23,7 @@ image_base64 = get_image_base64("AI (4).png")
 # Custom HTML to align image top-left
 st.markdown(
     f"""
-    <div style="position: absolute; top: 10px; left: 10px;">
+    <div style="position: absolute; top: 20px; left: 20px;">
         <img src="data:image/png;base64,{image_base64}" alt="AI Logo" style="height: 80px;">
     </div>
     """,
@@ -25,10 +34,7 @@ st.markdown(
 st.markdown("<br><br><br><br>", unsafe_allow_html=True)
 
 st.title("AI-Driven Drug Repurposing App")
-
-st.markdown("""
-            ---
-""")
+st.markdown("""---""")
 
 #Sections for better layout
 with st.expander("Welcome to the AI-Driven Drug Repurposing App!", expanded=False):
