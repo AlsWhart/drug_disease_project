@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Page title with emoji
-st.title("💊 Drug-Disease Interaction App 🔬")
+st.title("💊 AI-Driven Drug Repurposing App 🔬")
 
 st.markdown("Select a drug and a disease from the dropdown menus below:")
 
@@ -33,7 +33,7 @@ full_url = f"{base_url}?new_drug={drug_param}&new_disease={disease_param}"
 response = requests.get(full_url).json()
 
 # Display result with conditional logic
-st.subheader("🔎 Interaction Result:")
+st.subheader("🔎 Interaction Result")
 if response == "1.00":
     st.success(f"✅ There is **an interaction** between **{selected_drug}** and **{selected_disease}**.")
 elif response == "0.50":

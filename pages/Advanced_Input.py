@@ -1,16 +1,15 @@
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="Drug-Disease Interaction", page_icon="💊", layout="centered")
+st.set_page_config(page_title="AI-Driven Drug Repurposing App", page_icon="💊", layout="centered")
 
-st.title("💊 Drug-Disease Interaction App")
+st.title("💊 AI-Driven Drug Repurposing App")
 st.markdown("Use the controls below to select specific features to predict whether a drug interacts with a disease.")
 
 # Input sections with better layout
 with st.expander("📊 Number of Drug Targets", expanded=False):
-    num_drugtargets = st.number_input(
-        "Select the total number of target proteins that the drug interacts with. Range: 0 - 191.", min_value=0, max_value=191, value=1, step=1
-    )
+    st.caption("Select the total number of target proteins that the drug interacts with. Range: 0 - 191.")
+    num_drugtargets = st.number_input(min_value=0, max_value=191, value=1, step=1)
 
 with st.expander("🧪 Target Proteins", expanded=False):
     st.caption("Select the specific target proteins involved in the disease pathway.")
@@ -66,3 +65,7 @@ if st.button("🔍 Predict Interaction"):
         st.success(f"✅ Prediction: There is **{pretty_pred}**.")
     except Exception as e:
         st.error(f"❌ Failed to get prediction: {e}")
+
+# num_drugtargets = st.number_input(
+#         "Select the total number of target proteins that the drug interacts with. Range: 0 - 191.", min_value=0, max_value=191, value=1, step=1
+#     )
